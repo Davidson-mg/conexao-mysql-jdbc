@@ -23,10 +23,10 @@ public class DB {
             try{
                 Properties prop = loadPropriedades();/*Pegando as propriedades do aquivo "bd.propriedades" através do metodo abaixo loadPropriedades*/
 
-                String url = prop.getProperty("dburl"); /*Agora que a propriedade prop têm é igual ao metodo abaixo, vamos usa-lo pra carregar na variavel
-                do tipo string url a o endereco na linha "dburl" do arquivo que criamos com as propriedades de conexão para com o banco*/
+                String url = prop.getProperty("dburl"); /*Agora que a propriedade prop é igual ao metodo abaixo, vamos usa-lo pra carregar na variavel
+                do tipo string a url a o endereco na linha "dburl" do arquivo que criamos com as propriedades de conexão para com o banco*/
 
-                conn = (Connection) DriverManager.getConnection(url, prop); /*Estebelecendo com conexão com o BD. É necessario chamar a classe do jdbc 
+                conn = (Connection) DriverManager.getConnection(url, prop); /*Estebelecendo conexão com o BD. É necessario chamar a classe do jdbc 
                 DriverManager (têm que importar o java.sql.DriverManager) passando como parametro a variavel prop (possue os parametros do metodo loadPropriedades)
                 e a variavel url, que agora possui o endereço de conexão com o banco desejado
                 *Vamos precisar tratar a exceção SQLException no catch. */
